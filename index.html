@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!--    <script src="JSON.js"></script>-->
-
-</head>
-<body>
-<button type = "button" onclick = "loadJson()">Load Open Sourced Data</button>
-</body>
-<script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <button type="button" onclick="loadJson()">Load Open Sourced Data</button>
+      <!-- website navigation -->
+      <div id="nav"></div>
+      <!-- look up a restaurant -->
+      <div id="resSearch"></div>
+      <!-- resResults -->
+      <div></div>
+    </div>
+  </body>
+  <script>
     function loadJson() {
-        $.ajax({
-            url: "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
-            type: "GET",
-            data: {
-                "$limit" : 5000,
-                "$$app_token" : "jhZLBl156ply47f9UyK3Iuf3u"
-            }
-        }).done(function(data) {
-            alert("Retrieved " + data.length + " records from the dataset!");
-            for (let i = 0; i < 100; i++) {
-                console.log(data[i]["dba_name"] + " was inspected on " + data[i]["inspection_date"]
-                    + " and the result was" + data[i]["results"] + ". The unique id was " + data[i]["inspection_id"])
-                // console.log(data[i]["inspection_id"]);
-                // console.log(data[i]["inspection_date"]);
-                // console.log(data[i]["results"]);
-
-            }
-        });
-
+      $.ajax({
+        url: "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
+        type: "GET",
+        data: {
+          $limit: 5000,
+          $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+        },
+      }).done(function (data) {
+        alert("Retrieved " + data.length + " records from the dataset!");
+        for (let i = 0; i < 100; i++) {
+          console.log(
+            data[i]["dba_name"] +
+              " was inspected on " +
+              data[i]["inspection_date"] +
+              " and the result was" +
+              data[i]["results"] +
+              ". The unique id was " +
+              data[i]["inspection_id"]
+          );
+          // console.log(data[i]["inspection_id"]);
+          // console.log(data[i]["inspection_date"]);
+          // console.log(data[i]["results"]);
+        }
+      });
     }
-
-</script>
+  </script>
 </html>
