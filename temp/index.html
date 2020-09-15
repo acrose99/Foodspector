@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>beautiful landing page with search bar</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<div class="navbar">
+			<div class="logo">
+				<img class ="img-circle" src="apple-icon.png" alt="logo"/>
+			</div>
+			<ul>
+				<li><a href="#" class="active" onclick="loadJson()">Load Open Sourced Data</a></li>
+				<li><a href="#">Filter by name</a></li>
+				<li><a href="#">FIlter by risk</a></li>
+				<li><a href="#">FIlter by ZIP code</a></li>
+				<li><a href="#">FIlter by address</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			<div class="head">
+				<h1>FOOD<span>SPECTOR</span></h1>
+				<p>Inspect any restaurant</p>
+			</div>
+			<form id="f1" name="f1" class="search">
+				<input type="text" name="t1" placeholder="ENTER RESTAURANT...."
+				required="">
+				<input type="submit" name="b1" value="SEARCH" form="f1">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
