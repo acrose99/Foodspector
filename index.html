@@ -5,6 +5,8 @@
 	<title>Foodspector</title>
 	<link rel="icon" href="assets/FoodSpector.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="main.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -14,10 +16,10 @@
 			</div>
 			<ul>
 				<li><a href="#" class="active" onclick="loadJson()">Load Open Sourced Data</a></li>
-				<li><a href="#">Filter by name</a></li>
-				<li><a href="#">FIlter by risk</a></li>
-				<li><a href="#">FIlter by ZIP code</a></li>
-				<li><a href="#">FIlter by address</a></li>
+				<li><a href="#" onclick="filterByName()">Filter by name</a></li>
+				<li><a href="#" onclick="filterByRisk()">FIlter by risk</a></li>
+				<li><a href="#" onclick="filterByZip()">FIlter by ZIP code</a></li>
+				<li><a href="#" onclick="filterByAddress()">FIlter by address</a></li>
 			</ul>
 		</div>
 		<div class="info">
