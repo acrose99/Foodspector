@@ -1,3 +1,8 @@
+var form = document.getElementById("f1");
+form.onsubmit = function(event){
+    event.preventDefault();
+    console.log("Restaurant: " + form.t1.value);
+}
 function loadJson() {
     $.ajax({
         url: "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
