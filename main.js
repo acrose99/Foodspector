@@ -1,6 +1,8 @@
 var form = document.getElementById("f1");
+var input = ""
 form.onsubmit = function(event){
     event.preventDefault();
+    input = form.t1.value;
     console.log("Restaurant: " + form.t1.value);
 }
 function loadJson() {
