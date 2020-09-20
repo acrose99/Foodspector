@@ -7,7 +7,7 @@ form.onsubmit = function(event){
 }
 function loadJson() {
     $.ajax({
-        url: "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
+        url: "https://data.cityofchicago.org/resource/4iljn-s7e5.json",
         type: "GET",
         data: {
             $limit: 5000,
