@@ -110,13 +110,9 @@ body{
 	margin:-2% 0 2% 0;
 }
 .main .info .search{
-	position: relative;
-	height:auto;
-	width:60%;
 	background:#eb4d4b;
 	border:5px solid rgba(235, 77, 75,1);
 	border-radius: 5px;
-	left:50%;
 	transform: translateX(-50%);
 	display: flex;
 	align-items: center;
@@ -144,10 +140,8 @@ body{
 }
 .hamMenuWrap {
   /* position: absolute; */
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin-right: 222px;
   /* margin: auto; */
 }
 
@@ -156,10 +150,10 @@ body{
   display: none;
   width: 300px;
   position: relative;
-  height: auto;
 }
 #hamButton {
-  width: 300px;
+  /*width: 300px;*/
+	height: 62px;
   background-color: #eb4d4b;
   color: #fff;
   /* font-weight: 300; */
@@ -181,4 +175,9 @@ body{
   text-decoration: none;
   font-size: 16px;
   background-color: #0abde3;
+}
+#searchContainer {
+	margin-left: 15%;
+	display: inline-flex;
+	flex-direction: row;
 }
