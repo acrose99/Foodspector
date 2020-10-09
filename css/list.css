@@ -1,0 +1,15 @@
+/* Main Result Card on top */
+.list {
+    background-color: lightblue;
+    /*width: 300px;*/
+    align-items: center;
+}
+.name {
+    color:black
+}
+.pass{
+    color:green
+}
+.fail{
+    color:red
+}
