@@ -1,0 +1,49 @@
+/* Main Result Card on top */
+#resultsMain {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(230, 244, 251, 0.63);
+    width: 50%;
+    padding-bottom: 15px;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+}
+
+#passedOrFail {
+    color: #24FF00;
+}
+
+#mapIMG {
+    height: 200px;
+}
+/*Result cards */
+.resultsContainer {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.resultsMargin {
+    margin-right: 5%;
+}
+
+.resultContainer {
+    display: flex;
+    width: 30%;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    border-bottom: 1px dotted rgb(5, 5, 6);
+}
+
+.bodyResults {
+    margin-left: 15px;
+}
+
+.iconify {
+    color: #F12A00;
+    margin-top: 50%;
+}
+#PassVector {
+    height: 60px;
+    transform: translateY(20%);
+    /*display: inline-flex;*/
+}

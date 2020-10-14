@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+/* .main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #97d3f1;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+} */
+.main{
+	position: relative;
+	height:100vh;
+	width:100%;
+  background: #97d3f1;
+	/* background:linear-gradient(rgba(255, 127, 80,0.6),rgba(235, 77, 75,0.5)),url("assets/pic1.png"); */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+} 
+
+.main .navbar {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  margin: 2% 0 0 0;
+}
+
+.main .navbar .logo {
+  width: 15%; 
+  height: 9%;
+  cursor: pointer;
+  text-align: center; 
+  float: left; 
+}
+
+.img-circle {
+  /* object-fit: cover; */
+  border-radius: 50%;
+}
+
+.main .navbar ul {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  color: #fff;
+  float: right;
+}
+
+.main .navbar ul li {
+   list-style-type: none; 
+   display: inline-block; 
+}
+.main .navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+.main .navbar ul li a:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s ease-in-out width;
+}
+
+.main .navbar ul li a:hover:before,
+.main .navbar ul li a.active:before {
+  width: 100%;
+}
+
+.main .navbar ul li span {
+  padding: 2px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 200;
+}
+
+.main .info {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.main .info .head {
+  position: relative; 
+  height: auto;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main .info .head h1,
+h3 {
+  letter-spacing: 2px;
+}
+
+.main .info .head h1 span {
+  color: #0abde3;
+}
+
+.main .info .head p {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+  margin: -2% 0 2% 0;
+}
+
+.main .info .search {
+  background-color: #ffffff;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .info .search input[type="text"] {
+  height: 50px;
+  width: 100%;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+input[type="submit"] {
+  background-color: #4ba9eb;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-weight: 300;
+  font-size: 24px;
+  outline: none;
+  cursor: pointer;
+}
+
+.hamMenuWrap {
+  /* position: absolute; */
+  align-items: center;
+  /*margin-right: 222px;*/
+  /* margin: auto; */
+}
+
+#hamMenu {
+  background-color: #ffffff;
+  margin-right: 15px;
+  display: none;
+  width: 300px;
+  position: relative;
+}
+
+#hamButton {
+  /*width: 300px;*/
+  height: 62px;
+  background-color: #ffffff;
+  border: white;
+  color: #000000;
+  /* font-weight: 300; */
+  font-size: 18px;
+}
+.hamDivider {
+  /* display: block; */
+  height: 25px;
+  border-bottom: 3px solid rgba(33, 33, 33, 0.08);
+}
+.hamLink {
+  /* display: block; */
+  color: black;
+  text-decoration: none;
+}
+
+.hamMenu a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.hamMenu a:hover {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+#searchContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#submitContainer {
+  margin: 0;
+  /* display: flex; */
+  flex-direction: revert;
+}
+
+#submitInput {
+  margin-left: 25px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #97d3f1;
+  color: #fff;
+}
+
+/* For Roboto (Material Design) typography */
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto"),
+    url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
