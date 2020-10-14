@@ -1,0 +1,80 @@
+.violationContainer {
+    /*width: 25%;*/
+    /*margin: 25px auto;*/
+    /*height: 230px;*/
+    padding-bottom: 3px;
+    /*padding-top: 1px;*/
+    background: #FFFFFF;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: none;
+    position: sticky;
+}
+.violationButton {
+    margin-right: 7%;
+    background: #FFA489;
+
+
+    height:36px;
+    width: 76px;
+}
+.previous {
+    margin-left: 5%;
+}
+.violationNumber {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    top: 5%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0;
+
+    /* 00. On Surface / High Emphasis */
+
+    color: rgba(0, 0, 0, 0.87);
+}
+.violationButtonContainer {
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    margin-top: 40%;
+}
+
+.violationBody {
+    font-family: 'Roboto', sans-serif;
+    margin: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: inherit;
+    /* or 143% */
+    letter-spacing: 0;
+
+    /* 00. On Surface / Medium Emphasis */
+
+    color: rgba(0, 0, 0, 0.6);
+}
+#main {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    /* background:linear-gradient(rgba(255, 127, 80,0.6),rgba(235, 77, 75,0.5)),url("assets/pic1.png"); */
+    background: #97d3f1 no-repeat center;
+    background-size: cover;
+}
+a {
+
+    text-decoration: none;
+    color: #0d0807;
+}
+
+
+#violationPopUp {
+    display: none;
+}
