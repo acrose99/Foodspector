@@ -229,6 +229,13 @@ input[type="submit"] {
 #submitInput {
   margin-left: 25px;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #97d3f1;
+  color: #fff;
+}
 
 /* For Roboto (Material Design) typography */
 @font-face {
