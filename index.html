@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Foodspector</title>
-    <link rel="icon" href="assets/FoodSpector.png"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" href="assets/FoodSpector.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <!-- <script src="main.js"></script> -->
 </head>
+
 <body>
-<div class="main">
-
-
-    <div class="info">
-        <div class="head">
-            <img class="img-circle logo" src="assets/logo2.png" alt="logo"/>
-
-            <h1>FOODSPECTOR</h1>
-            <p>Inspect any restaurant</p>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="img-circle" src="assets/logo2.png" alt="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
         </div>
-        <div  id="searchContainer">
-            <div class="hamMenuWrap">
-                <div id="hamMenu" class="hamMenu">
-                    <div class="hamDivider">
-                        <a class="hamLink active" href="#"  onclick="loadJson()">Load Open Sourced Data</a>
-                    </div>
-                    <div class="hamDivider" >
-                        <a class="hamLink" href="#" onclick="filterByName()">Filter by name</a>
-                    </div>
-                    <div class="hamDivider">
-                        <a class="hamLink" href="#" onclick="filterByRisk()">Filter by risk</a>
-                    </div>
-                    <div class="hamDivider">
-                        <a class="hamLink" href="#" onclick="filterByZip()">Filter by Zip Code</a>
-                    </div>
-                    <div class="hamDivider">
-                        <a class="hamLink" href="#" onclick="filterByAddress()">Filter by address</a>
+
+
+        <div class="info">
+            <div class="head">
+                <!-- <img class="img-circle logo" src="assets/logo2.png" alt="logo" /> -->
+
+                <h1>FOODSPECTOR</h1>
+                <p>Inspect any restaurant</p>
+            </div>
+            <div id="searchContainer">
+                <div class="hamMenuWrap">
+                    <div id="hamMenu" class="hamMenu">
+                        <div class="hamDivider">
+                            <a class="hamLink active" href="#" onclick="loadJson()">Load Open Sourced Data</a>
+                        </div>
+                        <div class="hamDivider">
+                            <a class="hamLink" href="#" onclick="filterByName()">Filter by name</a>
+                        </div>
+                        <div class="hamDivider">
+                            <a class="hamLink" href="#" onclick="filterByRisk()">Filter by risk</a>
+                        </div>
+                        <div class="hamDivider">
+                            <a class="hamLink" href="#" onclick="filterByZip()">Filter by Zip Code</a>
+                        </div>
+                        <div class="hamDivider">
+                            <a class="hamLink" href="#" onclick="filterByAddress()">Filter by address</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="submitContainer" >
-                <form id="f1" name="f1" class="search">
-                    <button id="hamButton" onclick="menuFunction()">
-                        <span id="arrow" class="iconify" data-inline="false" data-icon="ant-design:arrow-down-outlined" style="color: #000; font-size: 24px;"></span>
-                    </button>
-                    <input
-                            type="text"
-                            name="t1"
-                            placeholder="ENTER RESTAURANT"
-                            required=""
-                    />
-                </form>
-                <input id="submitInput" type="submit" name="b1" value="SEARCH" form="f1"/>
+                <div id="submitContainer">
+                    <form id="f1" name="f1" class="search">
+                        <button id="hamButton" onclick="menuFunction()">
+                            <span id="arrow" class="iconify" data-inline="false"
+                                data-icon="ant-design:arrow-down-outlined" style="color: #000; font-size: 24px;"></span>
+                        </button>
+                        <input type="text" name="t1" placeholder="ENTER RESTAURANT" required="" />
+                    </form>
+                    <input id="submitInput" type="submit" name="b1" value="SEARCH" form="f1" />
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
