@@ -1,0 +1,25 @@
+{
+  "name": "foodspector",
+  "version": "1.0.0",
+  "description": "A web app for inspecting resturants in Chicago",
+  "main": "main.js",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmaamobi/Foodspector.git"
+  },
+  "author": "Alex rose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emmaamobi/Foodspector/issues"
+  },
+  "homepage": "https://github.com/emmaamobi/Foodspector#readme",
+  "dependencies": {
+    "parcel": "^1.12.4"
+  }
+}
