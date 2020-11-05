@@ -1,0 +1,254 @@
+/* Navbar Component */
+
+
+.navbar {
+    min-height: 90px;
+
+}
+.navbar ul {
+    /*position: relative;*/
+    height: 100%;
+    width: 50%;
+    color: #fff;
+    float: right;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    font-family: "Big Shoulders", serif;
+    display: inline-block;
+}
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+.navbar ul li a:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out width;
+}
+
+.navbar ul li a:hover:before,
+.navbar ul li a.active:before {
+    width: 100%;
+}
+
+.navbar ul li span {
+    padding: 2px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 200;
+}
+
+/* 64-75 is styling for the logo component */
+.navbar .logo {
+    width: 15%;
+    height: 9%;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+}
+
+.img-circle {
+    /* object-fit: cover; */
+    height: 100px;
+}
+
+/* Component for main articles/sections */
+.info {
+    position: relative;
+    /*top: 42%;*/
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+/* Footer Component */
+
+
+footer {
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: transparent;
+    color: #fff;
+}
+
+
+#copyRight {
+    font-family: "Big Shoulders", serif;
+    font-style: italic;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Everything to end of file is for the seach button */
+.main .info .search {
+    background-color: #ffffff;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .info .search input[type="text"] {
+    height: 50px;
+    width: 100%;
+    font-weight: 300;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+input[type="submit"] {
+    background-color: #4ba9eb;
+    border: none;
+    font-family: "Big Shoulders", sans-serif;
+    color: #000000;
+    font-weight: 300;
+    font-size: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamMenuWrap {
+    /* position: absolute; */
+    align-items: center;
+    /*margin-right: 222px;*/
+    /* margin: auto; */
+}
+
+#hamMenu {
+    background-color: #ffffff;
+    margin-right: 15px;
+    display: none;
+    width: 300px;
+    position: relative;
+}
+
+#hamButton {
+    /*width: 300px;*/
+    height: 62px;
+    background-color: #ffffff;
+    border: white;
+    color: #000000;
+    /* font-weight: 300; */
+    font-size: 18px;
+}
+.hamDivider {
+    /* display: block; */
+    height: 25px;
+    border-bottom: 3px solid rgba(33, 33, 33, 0.08);
+}
+.hamLink {
+    /* display: block; */
+    color: black;
+    text-decoration: none;
+}
+
+.hamMenu a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.hamMenu a:hover {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+#searchContainer {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#submitContainer {
+    margin: 0;
+    /* display: flex; */
+    flex-direction: revert;
+}
+
+#submitInput {
+    margin-left: 25px;
+}
+
+
+
+
+
+
+/* Team Emblem Component */
+.teamEmblemContainer {
+    /* Auto Layout */
+    display: flex;
+    /*flex-direction: row;*/
+    padding: 0;
+    /*width: 100%;*/
+    /*margin-top: 200px;*/
+    align-items: center;
+    justify-content: center;
+}
+
+.teamEmblem {
+    /*box-shadow: inset 0px -3px 2px #2D5892;*/
+    /*position: static;*/
+    /*width: 215px;*/
+    padding-bottom: 10px;
+    margin: 25px;
+    /*height: 80%;*/
+}
+.teamEmblemStar {
+
+}
+.teamEmblemTop {
+    background-color: #C1E4F5;
+    /*height: 200px;*/
+}
+.teamEmblemMid {
+    background-color: white;
+}
+.teamEmblemStar {
+    background-color: #FFFFFF;
+}
+
+.teamEmblemImage {
+    background-color: #FFFFFF;
+}
+
+.teamEmblemText {
+    color: white;
+    font-family: "Big Shoulders", serif;
+    font-size: 1em;
+    text-align: center;
+}

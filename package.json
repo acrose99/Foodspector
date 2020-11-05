@@ -4,7 +4,7 @@
   "description": "A web app for inspecting resturants in Chicago",
   "main": "main.js",
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html aboutUs.html risk.html results.html list.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,13 +13,14 @@
     "type": "git",
     "url": "git+https://github.com/emmaamobi/Foodspector.git"
   },
-  "author": "Alex rose",
+  "authors": "Alex Rose, Alex Crane, Jacob Narowski, Emmanuel Amobi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/emmaamobi/Foodspector/issues"
   },
   "homepage": "https://github.com/emmaamobi/Foodspector#readme",
   "dependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "jquery": "3.5.1"
   }
 }

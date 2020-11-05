@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <title>Foodspector</title>
+    <link rel="icon" href="assets/FoodSpector.png" />
+    <link rel="stylesheet" type="text/css" href="css/risk.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/components.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <!-- <script src="main.js"></script> -->
 </head>
 <body>
+<div class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img class="img-circle" src="assets/logo2.png" alt="logo">
+        </a>
+    </div>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="aboutUs.html">About us</a></li>
+        <li><a href="risk.html">What is risk?</a></li>
+    </ul>
+</div>
+<div class="info">
+    <h3><a href="https://dev.socrata.com/foundry/data.cityofchicago.org/4ijn-s7e5">We are using the City of Chicago Socrata API for our Data.</a></h3>
+
+    <h3>For transparency's sake, here is documentation on our data:</h3>
+
+    <h4>General</h4>
+    <p>
+        This information is derived from inspections of restaurants and other food establishments in Chicago from January 1, 2010 to the present. Inspections are performed by staff from the Chicago Department of Public Health’s Food Protection Program. Inspections are done using a standardized procedure. The results of the inspection are inputted into a database, then reviewed and approved by a State of Illinois Licensed Environmental Health Practitioner (LEHP).
+    </p>
+
+    <h4>Inspection Type</h4>
+    <p>
+        An inspection can be one of the following types: canvass, the most common type of inspection performed at a frequency relative to the risk of the establishment; consultation, when the inspection is done at the request of the owner prior to the opening of the establishment; complaint, when  the inspection is done in response to a complaint against the establishment; license, when the inspection is done as a requirement for the establishment to receive its license to operate; suspect food poisoning, when the inspection is done in response to one or more persons claiming to have gotten ill as a result of eating at the establishment (a specific type of complaint-
+        based inspection); task-force inspection, when an inspection of a bar or tavern is done. Re-inspections can occur for most types of these inspections and are indicated as such.
+    </p>
+    <h4 id="risk"><a href="risk.html">See our separate page for Risk.</a></h4>
+
+    <h4>Results</h4>
+
+    <p> An inspection can pass, pass with conditions or fail. Establishments receiving a ‘pass’ were found to have no critical or serious violations (violation number 1-14 and 15-29, respectively). Establishments receiving a ‘pass with conditions’ were found to have critical or serious violations, but these were corrected during the inspection. Establishments receiving a ‘fail’ were found to have critical or serious violations that were not correctable during the inspection. An establishment receiving a ‘fail’ does not necessarily mean the establishment’s licensed is suspended. Establishments found to be out of business or not located are indicated as such.</p>
+
+    <h4>Violations</h4>
+
+    <p>An establishment can receive one or more of 45 distinct violations (violation numbers 1-44 and 70). For each violation number listed for a given establishment, the requirement the establishment must meet in order for it to NOT receive a violation is noted, followed by a specific description of the findings that caused the violation to be issued.</p>
+</div>
+<footer>
+    <a id="copyRight" href="https://github.com/emmaamobi/Foodspector/blob/master/LICENSE">
+        <p>© 2020 Alexander Rose, Alex Crane, Emmanuel Amobi, Jack Narwoski</p>
+    </a>
+</footer>
 
 </body>
 </html>

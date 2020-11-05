@@ -1,0 +1,56 @@
+body {
+  width:100%;
+  background: #97d3f1 no-repeat center;
+  background-size: cover;
+}
+
+.main {
+  position: relative;
+  /*display: flex;*/
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main .info .head {
+  position: relative;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main .info .head h1,
+h3 {
+  letter-spacing: 2px;
+}
+
+.main .info .head h1 span {
+  color: #0abde3;
+}
+
+.main .info .head p {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+  margin: -2% 0 2% 0;
+}
+
+
+
+.indexSubmit {
+  transform: translateY(125%);
+}
+
+#indexFooter {
+  position: absolute;
+}

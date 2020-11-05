@@ -1,0 +1,16 @@
+/* For Chicago inspired typography */
+@font-face {
+    font-family: "Big Shoulders";
+    src:
+            local("Big Shoulders Text"),
+            local("Big Shoulders"),
+            url("/assets/BigShouldersText-Regular.ttf")  format('truetype');
+    font-weight: normal;
+}
+/* For Roboto (Material Design) typography */
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), local("Roboto"),
+    url("/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+}

@@ -1,0 +1,44 @@
+body {
+    background-color: #A4D5EE;
+    background-size: cover;
+    text-align: center;
+    font-family: "Big Shoulders", sans-serif;
+}
+h1 {
+    color: red;
+    font-size: 40px;
+}
+
+h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 26px;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+li {
+    color: #323a45;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.info p {
+    color: #323a45;
+}
+
+
+#description {
+    color: #112E51;
+    text-shadow: none;
+}
+
+#risk {
+    color: #FFFFFF;
+    text-decoration: none;
+}

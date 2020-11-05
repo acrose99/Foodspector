@@ -1,0 +1,164 @@
+/*Galaxy S9+ and Android */
+@media screen and (max-width: 360px) and (max-width: 375px) {
+    .teamEmblemContainer {
+        flex-direction: column;
+    }
+    .teamEmblem {
+        width: 150px;
+        /*margin-right: 25px;*/
+        /*box-shadow: inset 0px -3px 2px #2D5892; !* Used to signal the end of one person for mobile *!*/
+        height: 100%;
+    }
+    .teamEmblemTop {
+        height: 80px;
+    }
+    .teamEmblemStar {
+        width: 150px;
+        height: 80px;
+    }
+    .teamEmblemMid {
+        width: 150px;
+        height: 80px;
+    }
+    .teamEmblemImage {
+        width: 150px;
+        height: 80px;
+        vertical-align: bottom;
+    }
+
+}
+
+/*iPhone 6,7,8, X */
+@media screen and (max-width: 375px) and (max-width: 411px) {
+    .teamEmblemContainer {
+        flex-direction: column;
+    }
+    .teamEmblem {
+        width: 200px;
+        /*margin-right: 25px;*/
+        /*box-shadow: inset 0px -3px 2px #2D5892; !* Used to signal the end of one person for mobile *!*/
+        height: 100%;
+    }
+    .teamEmblemTop {
+        height: 100px;
+    }
+    .teamEmblemStar {
+        width: 200px;
+        height: 100px;
+    }
+    .teamEmblemMid {
+        width: 200px;
+        height: 100px;
+    }
+    .teamEmblemImage {
+        width: 200px;
+        height: 100px;
+        vertical-align: bottom;
+    }
+
+}
+
+/*iPhone Plus, XS, XS Max */
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .teamEmblemContainer {
+        flex-direction: column;
+    }
+    .teamEmblem {
+        width: 200px;
+        /*margin-right: 25px;*/
+        height: 80%;
+    }
+    .teamEmblemTop {
+        height: 100px;
+    }
+    .teamEmblemStar {
+        width: 200px;
+        height: 80px;
+    }
+    .teamEmblemImage {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+/* iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .teamEmblemContainer {
+        flex-direction: row;
+    }
+    .teamEmblem {
+        width: 140px;
+        /*margin-right: 25px;*/
+        height: 200px;
+    }
+    .teamEmblemTop {
+        height: 200px;
+    }
+    .teamEmblemMid {
+        width: 140px;
+        height: 200px;
+    }
+    .teamEmblemStar {
+        width: 140px;
+        height: 200px;
+    }
+    .teamEmblemImage {
+        width: 140px;
+        height: 200px;
+    }
+}
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    .teamEmblemContainer {
+        flex-direction: row;
+    }
+    .teamEmblem {
+        width: 200px;
+        /*margin-right: 25px;*/
+        height: 200px;
+    }
+    .teamEmblemTop {
+        height: 200px;
+    }
+    .teamEmblemMid {
+        width: 200px;
+        height: 200px;
+    }
+    .teamEmblemStar {
+        width: 200px;
+        height: 200px;
+    }
+    .teamEmblemImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+body {
+    background: #97d3f1 no-repeat center;
+    background-size: cover;
+}
+
+#HeaderTeam {
+    font-family: "Big Shoulders", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 112.9%;
+    /* or 108px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 10px 4px #000000;
+
+}
