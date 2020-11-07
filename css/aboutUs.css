@@ -93,14 +93,20 @@
     }
     .teamEmblemTop {
         height: 200px;
+        width: 140px;
+        padding-left: 20px;
+
     }
     .teamEmblemMid {
         width: 140px;
+        padding-left: 20px;
         height: 200px;
     }
     .teamEmblemStar {
         width: 140px;
         height: 200px;
+        position: relative;
+        right: 20px;
     }
     .teamEmblemImage {
         width: 140px;
@@ -119,13 +125,18 @@
     }
     .teamEmblemTop {
         height: 200px;
+        width: 200px;
+        padding-left: 20px;
     }
     .teamEmblemMid {
         width: 200px;
+        padding-left: 20px;
         height: 200px;
     }
     .teamEmblemStar {
         width: 200px;
+        position: relative;
+        right: 20px;
         height: 200px;
     }
     .teamEmblemImage {

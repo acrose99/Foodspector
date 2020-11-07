@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/emmaamobi/Foodspector#readme",
   "dependencies": {
-    "parcel": "^1.12.4",
-    "jquery": "3.5.1"
+    "date-fns": "^2.16.1",
+    "jquery": "3.5.1",
+    "parcel": "^1.12.4"
   }
 }

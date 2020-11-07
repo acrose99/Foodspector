@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Foodspector</title>
     <link rel="icon" href="assets/FoodSpector.png" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/components.css" />
-
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <!-- <script src="main.js"></script> -->
@@ -35,48 +35,73 @@
             <div class="head">
                 <!-- <img class="img-circle logo" src="assets/logo2.png" alt="logo" /> -->
 
-                <h1>FOODSPECTOR</h1>
-                <p>Inspect any restaurant</p>
+                <h1>FoodSpector</h1>
+                <p>Helping Chicago make healthy choices!</p>
             </div>
+            <input type="checkbox" class="fire-check" />
+
+            <section>
+
+                <div class="tn-box tn-box-color-1">
+                    <p>Click the arrow below for advanced search options!</p>
+                    <div class="tn-progress"></div>
+                </div>
+
+            </section>
             <div id="searchContainer">
                 <div class="hamMenuWrap">
                     <div id="hamMenu" class="hamMenu">
                         <div class="hamDivider">
-                            <a class="hamLink active" href="#" onclick="loadJson()">Load Open Sourced Data</a>
+                            <button name="jsonLoader"  type="button" class="hamLink active" onclick="searchType(this)">Load Open Sourced Data</button>
                         </div>
                         <div class="hamDivider">
-                            <a class="hamLink" href="#" onclick="filterByName()">Filter by name</a>
+                            <button name="nameFilter" class="hamLink" type="button" onclick="searchType(this)">Filter by name</button>
                         </div>
                         <div class="hamDivider">
-                            <a class="hamLink" href="#" onclick="filterByRisk()">Filter by risk</a>
+                            <button name="riskFilter"  type="button" class="hamLink" onclick="searchType(this)">Filter by risk</button>
                         </div>
                         <div class="hamDivider">
-                            <a class="hamLink" href="#" onclick="filterByZip()">Filter by Zip Code</a>
+                            <button name="zipFilter" type="button" class="hamLink" onclick="searchType(this)">Filter by Zip Code</button>
                         </div>
                         <div class="hamDivider">
-                            <a class="hamLink" href="#" onclick="filterByAddress()">Filter by address</a>
+                            <button name="addressFilter"  type="button" class="hamLink" onclick="searchType(this)">Filter by address</button>
                         </div>
                     </div>
                 </div>
-                <div id="submitContainer" class="indexSubmit">
-                    <form id="f1" name="f1" class="search">
-                        <button id="hamButton" onclick="menuFunction()">
+                <div id="submitContainer">
+                    <form id="f1" name="f1" class="search" >
+                        <button  type="button" id="hamButton" onclick="menuFunction()">
                             <span id="arrow" class="iconify" data-inline="false"
                                 data-icon="ant-design:arrow-down-outlined" style="color: #000; font-size: 24px;"></span>
                         </button>
                         <input type="text" name="t1" placeholder="ENTER RESTAURANT" required="" />
                     </form>
-                    <input id="submitInput" type="submit" name="b1" value="SEARCH" form="f1" />
+                    <button id="submitInput" type="button" name="b1" value="Search" form="f1" onclick = "submitFunc()">Search</button>
                 </div>
             </div>
+            <div id="results"></div>
         </div>
     </div>
-    <footer id="indexFooter">
+    <footer>
         <a id="copyRight" href="https://github.com/emmaamobi/Foodspector/blob/master/LICENSE">
             <p>© 2020 Alexander Rose, Alex Crane, Emmanuel Amobi, Jack Narwoski</p>
         </a>
     </footer>
     <script src="main.js"></script>
+    <script>
+        function menuFunction() {
+            let menu = document.getElementById("hamMenu");
+            let arrow = document.getElementById("arrow");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+                arrow.style.transform = "rotateZ(0)";
+            } else {
+                menu.style.display = "block";
+                arrow.style.transform = "rotateZ(90deg)";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
