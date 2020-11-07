@@ -1,3 +1,5 @@
+let $$app_token = import('config');
+
 let form = document.getElementById("f1");
 let input;
 let searchChosen = "name"; //default search
@@ -59,7 +61,7 @@ function loadJson() {
         type: "GET",
         data: {
             $limit: 5000,
-            $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+            $$app_token: $$app_token,
         },
     }).done(function (data) {
         alert("Retrieved " + data.length + " records from the dataset!");
@@ -108,7 +110,7 @@ function filterByName(nameInputted) {
         type: "GET",
         data: {
             $limit: 5,
-            $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+            $$app_token: $$app_token,
             $where: "dba_name like '%" + name + "'"
         },
     }).done(function (data) {
@@ -167,7 +169,7 @@ function filterByRisk(riskInputted) {
         type: "GET",
         data: {
             $limit: 5,
-            $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+            $$app_token: $$app_token,
             risk: risk,
         },
     }).done(function (data) {
@@ -219,7 +221,7 @@ function filterByZip(zipInputted) {
             type: "GET",
             data: {
                 $limit: 5,
-                $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+                $$app_token: $$app_token,
                 zip: zip,
             },
         }).done(function (data) {
@@ -275,7 +277,7 @@ function filterByAddress(addressInputted) {
         type: "GET",
         data: {
             $limit: 5,
-            $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+            $$app_token: $$app_token,
             address: address, //you need to add a extra space.
         },
     }).done(function (data) {
