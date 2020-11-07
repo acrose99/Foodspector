@@ -112,9 +112,6 @@ function filterByName(nameInputted) {
             $where: "dba_name like '%" + name + "'"
         },
     }).done(function (data) {
-
-
-
         alert("Retrieved " + data.length + " records from the dataset!");
         // document.location.href = "./list.html";
         let searchQ = sessionStorage.getItem("search_query");
@@ -215,38 +212,41 @@ function filterByZip(zipInputted) {
 
     zip = zip.trimEnd(); // For user error
     console.log(zip);
-    $.ajax({
-        url: "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
-        type: "GET",
-        data: {
-            $limit: 5,
-            $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
-            zip: zip,
-        },
-    }).done(function (data) {
 
-
-
-        alert("Retrieved " + data.length + " records from the dataset!");
-        // document.location.href = "./list.html";
-        let searchQ = sessionStorage.getItem("search_query");
-        console.log("search_query: " + searchQ);
-        console.log(data[0]);
-        let length = data.length;
-        if (length === 1) {
-            appendResult(data[0]);
-        }
-        else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
-            alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 242 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<p>" + searchQ + "</p>";
-            for (let i = 0; i < data.length; i++) {
-                // appendResultList(data[i]);
-                appendResult(data[i]);
-                //USE ^^^^^ FOR ALEX R's CODE
+    try {
+        $.ajax({
+            url: "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
+            type: "GET",
+            data: {
+                $limit: 5,
+                $$app_token: "jhZLBl156ply47f9UyK3Iuf3u",
+                zip: zip,
+            },
+        }).done(function (data) {
+            alert("Retrieved " + data.length + " records from the dataset!");
+            // document.location.href = "./list.html";
+            let searchQ = sessionStorage.getItem("search_query");
+            console.log("search_query: " + searchQ);
+            console.log(data[0]);
+            let length = data.length;
+            if (length === 1) {
+                appendResult(data[0]);
             }
-        }
-        // document.location.href = "./list.html";
-    });
+            else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
+                alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 242 of main.js) for the syntax!");
+                document.getElementById("results").innerHTML="<p>" + searchQ + "</p>";
+                for (let i = 0; i < data.length; i++) {
+                    // appendResultList(data[i]);
+                    appendResult(data[i]);
+                    //USE ^^^^^ FOR ALEX R's CODE
+                }
+            }
+            // document.location.href = "./list.html";
+        });
+    }
+    catch (e) {
+        alert("Invalid Input!");
+    }
 }
 
 
