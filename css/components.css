@@ -675,6 +675,23 @@ footer {
 .bodyResults {
     margin-left: 20%;
 }
+.bodyResultsNeutral {
+    margin-left: 20%;
+    color: #323A45;
+}
+.bodySubtitleNeutral {
+    white-space: pre;
+    font-size: 1.2em;
+    color: #323A45;
+    font-weight: bold;
+}
+.captionResultsNeutral {
+    margin-left: 15%;
+    white-space: pre;
+    font-size: 1.2em;
+    color: #323A45;
+    font-weight: bold;
+}
 
 .iconify {
     color: #F12A00;

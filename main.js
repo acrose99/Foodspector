@@ -428,7 +428,7 @@ function appendResult(data) {
 
     const inspectionTypeIconContainer = document.createElement("div");
     inspectionTypeIconContainer.className = "iconResults";
-    inspectionTypeIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:form-select' style='font-size: 64px;'></span>"
+    inspectionTypeIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:form-select' style='color: #323A45; font-size: 64px;'></span>"
 
     let inspection_type = data["inspection_type"];
 
@@ -455,19 +455,19 @@ function appendResult(data) {
 
 
     const inspectionTypeBodyResult = document.createElement("div");
-    inspectionTypeBodyResult.className = "bodyResults";
+    inspectionTypeBodyResult.className = "bodyResultsNeutral";
     let inspectionTypeBody = document.createElement("h3");
-    inspectionTypeBody.className ="bodySubtitle";
+    inspectionTypeBody.className ="bodySubtitleNeutral";
     inspectionTypeBody.innerText = "Inspection Type";
     let inspectionTypeSecondaryText = document.createElement("h3");
-    inspectionTypeSecondaryText.className = "bodySecondaryText";
+    inspectionTypeSecondaryText.className = "bodySecondaryTextNeutral";
     inspectionTypeSecondaryText.innerText = inspectionTypeText;
 
     inspectionTypeBodyResult.append(inspectionTypeBody,inspectionTypeSecondaryText);
 
 
     const inspectionTypeCaptionResults = document.createElement("div");
-    inspectionTypeCaptionResults.className = "captionResults";
+    inspectionTypeCaptionResults.className = "captionResultsNeutral";
     let inspectionTypeCaptionResultText = document.createElement("p");
     inspectionTypeCaptionResultText.className = "captionResultText";
     inspectionTypeCaptionResultText.innerText = data["inspection_type"];
@@ -501,16 +501,16 @@ function appendResult(data) {
 
     const inspectionDateIconContainer = document.createElement("div");
     inspectionDateIconContainer.className = "iconResults";
-    inspectionDateIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:calendar-range' style='font-size: 64px;'></span>"
+    inspectionDateIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:calendar-range' style='color: #323A45; font-size: 64px;'></span>"
 
 
     const inspectionDateBodyResult = document.createElement("div");
-    inspectionDateBodyResult.className = "bodyResults";
+    inspectionDateBodyResult.className = "bodyResultsNeutral";
     let inspectionDateBody = document.createElement("h3");
-    inspectionDateBody.className ="bodySubtitle";
+    inspectionDateBody.className ="bodySubtitleNeutral";
     inspectionDateBody.innerText = "Inspection Date";
     let inspectionDateSecondaryText = document.createElement("h3");
-    inspectionDateSecondaryText.className = "bodySecondaryText";
+    inspectionDateSecondaryText.className = "bodySecondaryTextNeutral";
     inspectionDateSecondaryText.innerText = "This restaurant was last inspected on " + humanReadableDate;
 
     inspectionDateBodyResult.append(inspectionDateBody,inspectionDateSecondaryText);
@@ -552,10 +552,6 @@ function appendResult(data) {
     const inspectionRiskContainer = document.createElement("div");
     inspectionRiskContainer.className = "resultContainer";
 
-    const inspectionRiskIconContainer = document.createElement("div");
-    inspectionRiskIconContainer.className = "iconResults";
-    inspectionRiskIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='ri:alarm-warning-fill' style='font-size: 64px;'></span>"
-
 
     const inspectionRiskResult = document.createElement("div");
     inspectionRiskResult.className = "bodyResults";
@@ -581,6 +577,23 @@ function appendResult(data) {
         riskDescription = "The risk of this location is Low"
         riskValue = 3;
     }
+
+    const inspectionRiskIconContainer = document.createElement("div");
+    inspectionRiskIconContainer.className = "iconResults";
+
+    if(riskValue === 3) {
+        inspectionRiskIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='ri:alarm-warning-fill' style='color: #2e8540; font-size: 64px;'></span>"
+    }
+    else if(riskValue === 2) {
+        inspectionRiskIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='ri:alarm-warning-fill' style='color: #F18200; font-size: 64px;'></span>"
+
+    }
+    else if(riskValue === 1) {
+        inspectionRiskIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='ri:alarm-warning-fill' style='color: red; font-size: 64px;'></span>"
+
+    }
+
+
     inspectionRiskSecondaryText.innerText = riskDescription;
 
     inspectionRiskResult.append(inspectionRiskBody,inspectionRiskSecondaryText);
@@ -630,12 +643,19 @@ function appendResult(data) {
     let violationCount = 0;
     let violationHint;
 
-    if (violationDump === undefined) {
+    if (violationDump === undefined && data["results"] === "Out of Business") {
+        violationDescription = "N/A, Out of Business!"
+    }
+    else if (violationDump === undefined && data["results"] === "Not Ready") {
+        violationDescription = "N/A, Not Ready!"
+    }
+    else if (violationDump === undefined) {
         violationDescription = "There are no violations!"
         violationHint = "WIP";
     }
     else {
         violationDescription = "Click to see what violations this location got!"
+        violationCount++; //TODO actually parse the file.
     }
 
 
@@ -645,7 +665,17 @@ function appendResult(data) {
 
     const inspectionViolationIconContainer = document.createElement("div");
     inspectionViolationIconContainer.className = "iconResults";
-    inspectionViolationIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:alert-octagram' style='font-size: 64px;'></span>"
+
+    if (violationDescription.includes("N/A, Out of Business") || violationDescription.includes("Not Ready") ){
+        console.log("test");
+        inspectionViolationIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:alert-octagram' style='font-size: 64px; color: #f18200;'></span>"
+    }
+    else if (violationCount > 0 ) {
+        inspectionViolationIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:alert-octagram' style='font-size: 64px;'></span>"
+    }
+    else {
+        inspectionViolationIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:alert-octagram' style='font-size: 64px; color: #2e8540;'></span>"
+    }
 
 
     const inspectionViolationResult = document.createElement("div");
