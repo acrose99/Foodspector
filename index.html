@@ -69,14 +69,18 @@
                     </div>
                 </div>
                 <div id="submitContainer">
-                    <form id="f1" name="f1" class="search" >
+<!--                    <form action="" id="f1" name="f1" class="search" onsubmit="submitFunc()">-->
+                    <div class="search">
                         <button  type="button" id="hamButton" onclick="menuFunction()">
                             <span id="arrow" class="iconify" data-inline="false"
-                                data-icon="ant-design:arrow-down-outlined" style="color: #000; font-size: 24px;"></span>
+                                  data-icon="ant-design:arrow-down-outlined" style="color: #000; font-size: 24px;"></span>
                         </button>
-                        <input type="text" name="t1" placeholder="ENTER RESTAURANT" required="" />
-                    </form>
-                    <button id="submitInput" type="button" name="b1" value="Search" form="f1" onclick = "submitFunc()">Search</button>
+                        <label id="l1">
+                            <input type="text" name="t1" placeholder="ENTER RESTAURANT" required="" />
+                        </label>
+                    </div>
+                    <!--                    </form>-->
+                    <button id="submitInput" type="button" name="b1" value="Search" onclick = "submitFunc()">Search</button>
                 </div>
             </div>
             <div id="results"></div>

@@ -1,6 +1,6 @@
 let $$app_token = import('config');
 
-let form = document.getElementById("f1");
+let label = document.getElementById("l1");
 let input;
 let searchChosen = "name"; //default search
 // form.onsubmit =
@@ -35,20 +35,20 @@ function searchType(buttonType) {
 
 function submitFunc() {
     // console.log(searchChosen);
-    input = form.t1.value;
-    // console.log("Restaurant: " + input);
+    input = label.children[0].value;
+    console.log("Restaurant: " + input);
     // sessionStorage.setItem("search_query", input)
     if (searchChosen === "name") {
-        filterByName(form.t1.value);
+        filterByName(input);
     }
     else if (searchChosen === "risk") {
-        filterByRisk(form.t1.value);
+        filterByRisk(input);
     }
     else if (searchChosen === "zip") {
-        filterByZip(form.t1.value);
+        filterByZip(input);
     }
     else if (searchChosen === "address") {
-        filterByAddress(form.t1.value);
+        filterByAddress(input);
     }
     else {
        alert("Error, invalid input! This is probably FoodSpector's fault!");
