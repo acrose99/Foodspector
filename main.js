@@ -114,7 +114,7 @@ function filterByName(nameInputted) {
             $where: "dba_name like '%" + name + "'"
         },
     }).done(function (data) {
-        alert("Retrieved " + data.length + " records from the dataset!");
+        // alert("Retrieved " + data.length + " records from the dataset!");
         // document.location.href = "./list.html";
         let searchQ = sessionStorage.getItem("search_query");
         console.log("search_query: " + searchQ);
@@ -125,7 +125,7 @@ function filterByName(nameInputted) {
         }
         else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
             // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 132 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<p>" + searchQ + "</p>";
+            document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
             for (let i = 0; i < data.length; i++) {
                 // appendResultList(data[i]);
                 appendResult(data[i]);
@@ -176,7 +176,7 @@ function filterByRisk(riskInputted) {
 
 
 
-        alert("Retrieved " + data.length + " records from the dataset!");
+        // alert("Retrieved " + data.length + " records from the dataset!");
         // document.location.href = "./list.html";
         let searchQ = sessionStorage.getItem("search_query");
         console.log("search_query: " + searchQ);
@@ -186,8 +186,8 @@ function filterByRisk(riskInputted) {
             appendResult(data[0]);
         }
         else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
-            alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 194 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<h1>" + searchQ + "</h1>";
+            // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 194 of main.js) for the syntax!");
+            document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
             for (let i = 0; i < data.length; i++) {
                 // appendResultList(data[i]);
                 appendResult(data[i]);
@@ -225,7 +225,7 @@ function filterByZip(zipInputted) {
                 zip: zip,
             },
         }).done(function (data) {
-            alert("Retrieved " + data.length + " records from the dataset!");
+            // alert("Retrieved " + data.length + " records from the dataset!");
             // document.location.href = "./list.html";
             let searchQ = sessionStorage.getItem("search_query");
             console.log("search_query: " + searchQ);
@@ -235,8 +235,8 @@ function filterByZip(zipInputted) {
                 appendResult(data[0]);
             }
             else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
-                alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 242 of main.js) for the syntax!");
-                document.getElementById("results").innerHTML="<p>" + searchQ + "</p>";
+                // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 242 of main.js) for the syntax!");
+                document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
                 for (let i = 0; i < data.length; i++) {
                     // appendResultList(data[i]);
                     appendResult(data[i]);
@@ -281,7 +281,7 @@ function filterByAddress(addressInputted) {
             address: address, //you need to add a extra space.
         },
     }).done(function (data) {
-        alert("Retrieved " + data.length + " records from the dataset!");
+        // alert("Retrieved " + data.length + " records from the dataset!");
         // document.location.href = "./list.html";
         let searchQ = sessionStorage.getItem("search_query");
         console.log("search_query: " + searchQ);
@@ -291,8 +291,8 @@ function filterByAddress(addressInputted) {
             appendResult(data[0]);
         }
         else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
-            alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 295 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<p>" + searchQ + "</p>";
+            // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 295 of main.js) for the syntax!");
+            document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
             for (let i = 0; i < data.length; i++) {
                 // appendResultList(data[i]);
                 appendResult(data[i]);
@@ -370,12 +370,49 @@ function appendResult(data) {
     resultMainCaption.innerHTML = "<h1> <img src='" + resultMainCaptionSVG + "' id='PassVector'/>"+ data["dba_name"] + " Results: " + "<span style='" +resultMainCaptionStyling + "'>" + data["results"] + "</span></h1>" ;
 
 
-    let resultMainImg = document.createElement("img");
-    resultMainImg.id ="mapIMG";
+    let longitude = data["longitude"];
+    console.log(data["dba_name"] + " longitude: "+ longitude);
+
+    let latitude = data["latitude"];
+    console.log(data["dba_name"] + " latitude: "+ latitude);
+
+    let resultMainMap = document.createElement("div");
+    resultMainMap.className = "map";
+    var resultMainMapID = "map_" + data["dba_name"];
+    resultMainMap.id = resultMainMapID
+
+    let resultMainMapScript = document.createElement("script");
+    resultMainMapScript.type = "text/javascript";
+    // var map = new ol.Map({
+    //     target: 'map',
+    //     layers: [
+    //         new ol.layer.Image({
+    //             source: new ol.source.OSM()
+    //         })
+    //     ],
+    //     view: new ol.View({
+    //         center: ol.proj.fromLonLat([latitude, longitude], 'EPSG:4326', 'EPSG:3857'),
+    //         zoom: 4
+    //     })
+    // });
+
+
+    resultMainMapScript.innerText = "var map = new ol.Map({target: '"+ resultMainMapID + "', layers: [new ol.layer.Tile({source: new ol.source.OSM()})], view: new ol.View({center: ol.proj.fromLonLat([" + longitude + "," + latitude + "]), zoom: 14})});"
+
+    console.log(resultMainMapScript.innerText);
+
+    // console.log(map);
+
+
+    // let resultMainImg = document.createElement("img");
+    // resultMainImg.id ="mapIMG";
+
+
     // check to see if this works resultMainImg.src = "assets/LaUnicaMap.png";
 
     //change this later using Google Maps.
-    resultMainImg.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic2.cbrimages.com%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F09%2FGarfieldheader.jpg&f=1&nofb=1';
+
+    // resultMainImg.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic2.cbrimages.com%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F09%2FGarfieldheader.jpg&f=1&nofb=1';
 
     let resultMainBody = document.createElement("h4");
     resultMainBody.id ="resultsExplanation";
@@ -384,8 +421,15 @@ function appendResult(data) {
 
 
     resultMain.appendChild(resultMainCaption);
-    resultMain.appendChild(resultMainImg);
-    resultMain.appendChild(resultMainBody);
+    resultMain.appendChild(resultMainMap);
+    resultMain.appendChild(resultMainMapScript);
+    // if (document.getElementById(resultMainMapID).children.length <= 0){
+    //     let resultMainMapError = document.createElement("h1");
+    //     resultMainMapError.innerText = "Error 123";
+    //     resultMain.appendChild(resultMainMapError);
+    // }
+
+    // resultMain.appendChild(resultMainBody);
 
     /*
                 <div class="resultsContainer">
@@ -667,7 +711,6 @@ function appendResult(data) {
     inspectionViolationIconContainer.className = "iconResults";
 
     if (violationDescription.includes("N/A, Out of Business") || violationDescription.includes("Not Ready") ){
-        console.log("test");
         inspectionViolationIconContainer.innerHTML="<span class='iconify' data-inline='false' data-icon='mdi:alert-octagram' style='font-size: 64px; color: #f18200;'></span>"
     }
     else if (violationCount > 0 ) {

@@ -645,9 +645,23 @@ footer {
     font-size: 16px;
 }
 
-
+.map {
+    height: 350px;
+    /*display: inherit;*/
+    /*position: inherit;*/
+    width: 100%;
+}
+.ol-overlaycontainer-stopevent {
+    display: none;
+}
 #mapIMG {
     height: 200px;
+}
+
+.results, h2 {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 1.5em;
 }
 /*Result cards */
 .resultsContainer {
