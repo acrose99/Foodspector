@@ -645,9 +645,34 @@ footer {
     font-size: 16px;
 }
 
+.map {
+    height: 350px;
+    /*display: inherit;*/
+    /*position: inherit;*/
+    width: 100%;
+}
+.ol-attribution {
+    display: none;
+}
+.ol-compass, ol-rotate {
+    display: none;
+}
+.ol-overlaycontainer-stopevent {
+    text-align: left;
+}
+.ol-zoom {
+
+}
+
 
 #mapIMG {
     height: 200px;
+}
+
+.results, h2 {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 1.5em;
 }
 /*Result cards */
 .resultsContainer {
