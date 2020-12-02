@@ -1,3 +1,192 @@
+/*Galaxy S9+ and Android */
+@media screen and (max-width: 360px) and (max-width: 375px) {
+  .info {
+  }
+  .navbar ul li a::before {
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .resultsContainer {
+    flex-direction: column;
+  }
+  .resultContainer {
+    min-width: 250px;
+    max-width: 275px;
+    /*min-width: 300px;*/
+    /*max-width: 350px;*/
+  }
+  #resultsMain {
+    margin: 0 auto;
+    /*background: rgba(230, 244, 251, 0.63);*/
+    padding-bottom: 15px;
+    /*box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);*/
+  }
+
+  #resultMainCaption {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 16px;
+  }
+  #resultsExplanation {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 12px;
+  }
+
+
+}
+
+/*iPhone 6,7,8, X */
+@media screen and (max-width: 375px) and (max-width: 411px) {
+  .info {
+  }
+  .navbar ul li a::before {
+  }
+  .info {
+  }
+  .resultsContainer {
+    flex-direction: column;
+  }
+  .resultContainer {
+    min-width: 275px;
+    max-width: 300px;
+    /*min-width: 300px;*/
+    /*max-width: 350px;*/
+  }
+  #resultsMain {
+    margin: 0 auto;
+    /*background: rgba(230, 244, 251, 0.63);*/
+    padding-bottom: 15px;
+    /*box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);*/
+  }
+
+  #resultMainCaption {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 16px;
+  }
+  #resultsExplanation {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 12px;
+  }
+
+}
+
+/*iPhone Plus, XS, XS Max */
+@media screen and (min-width: 414px) and (max-width: 768px) {
+  .info {
+  }
+  .navbar ul li a::before {
+  }
+  .info {
+  }
+  .resultsContainer {
+    flex-direction: column;
+  }
+  .resultContainer {
+    min-width: 300px;
+    max-width: 350px;
+    /*min-width: 300px;*/
+    /*max-width: 350px;*/
+  }
+  #resultsMain {
+    margin: 0 auto;
+    /*background: rgba(230, 244, 251, 0.63);*/
+    padding-bottom: 15px;
+    /*box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);*/
+  }
+
+  #resultMainCaption {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 18px;
+  }
+  #resultsExplanation {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 14px;
+  }
+}
+
+/* iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .info {
+  }
+  .navbar ul li a::before {
+    background: white;
+  }
+  .info {
+    width: 50%;
+  }
+  .resultsContainer {
+    flex-direction: row;
+  }
+  .resultContainer {
+    min-width: 300px;
+    max-width: 350px;
+    /*min-width: 300px;*/
+    /*max-width: 350px;*/
+  }
+  #resultsMain {
+    margin: 0 auto;
+    /*background: rgba(230, 244, 251, 0.63);*/
+    padding-bottom: 15px;
+    /*box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);*/
+  }
+
+  #resultMainCaption {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 18px;
+  }
+  #resultsExplanation {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 14px;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .info {
+    width: 50%;
+  }
+  .navbar ul li a::before {
+    background: white;
+  }
+  .info {
+  }
+  .resultsContainer {
+    flex-direction: row;
+  }
+  .resultContainer {
+    min-width: 300px;
+    max-width: 350px;
+    /*min-width: 300px;*/
+    /*max-width: 350px;*/
+  }
+  #resultsMain {
+    margin: 0 auto;
+    /*background: rgba(230, 244, 251, 0.63);*/
+    padding-bottom: 15px;
+    /*box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);*/
+  }
+
+  #resultMainCaption {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 20px;
+  }
+  #resultsExplanation {
+    font-family: 'Big Shoulders', serif;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+
 body {
   width:100%;
   background: #97d3f1 no-repeat center;

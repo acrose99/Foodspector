@@ -397,9 +397,9 @@ function appendResult(data) {
     // });
 
 
-    resultMainMapScript.innerText = "var map = new ol.Map({target: '"+ resultMainMapID + "', layers: [new ol.layer.Tile({source: new ol.source.OSM()})], view: new ol.View({center: ol.proj.fromLonLat([" + longitude + "," + latitude + "]), zoom: 14})});"
-
-    console.log(resultMainMapScript.innerText);
+    // resultMainMapScript.innerText = "var map = new ol.Map({target: '"+ resultMainMapID + "', layers: [new ol.layer.Tile({source: new ol.source.OSM()})], view: new ol.View({center: ol.proj.fromLonLat([" + longitude + "," + latitude + "]), zoom: 14})});"
+    //
+    // console.log(resultMainMapScript.innerText);
 
     // console.log(map);
 

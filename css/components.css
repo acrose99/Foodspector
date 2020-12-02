@@ -36,7 +36,7 @@
     content: "";
     height: 2px;
     width: 0;
-    background: #fff;
+    /*background: #fff;*/
     left: 0;
     bottom: 0;
     transition: 0.5s ease-in-out width;
@@ -383,7 +383,7 @@ input.fire-check:checked ~ section .tn-box:nth-child(3) .tn-progress {
     position: relative;
     /*top: 42%;*/
     text-align: center;
-    width: 50%;
+    /*width: 50%;*/
     margin: 0 auto;
 }
 
@@ -448,7 +448,7 @@ footer {
     background-color: #ffffff;
     margin-right: 15px;
     display: none;
-    width: 300px;
+    width: 150px;
     position: relative;
 }
 
@@ -629,9 +629,9 @@ footer {
 /* Main Result Card on top */
 #resultsMain {
     margin: 0 auto;
-    background: rgba(230, 244, 251, 0.63);
+    /*background: rgba(230, 244, 251, 0.63);*/
     padding-bottom: 15px;
-    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);*/
 }
 
 #resultMainCaption {
@@ -646,10 +646,10 @@ footer {
 }
 
 .map {
-    height: 350px;
+    /*height: 350px;*/
     /*display: inherit;*/
     /*position: inherit;*/
-    width: 100%;
+    /*width: 100%;*/
 }
 .ol-overlaycontainer-stopevent {
     display: none;
@@ -668,12 +668,11 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 25px;
-    left: 10px;
-    transform: translateX(10%);
+    /*left: 10px;*/
+    /*transform: translateX(10%);*/
 }
 .captionResults {
-    margin-left: 15%;
-    white-space: pre;
+    margin-left: 8%;
     font-size: 1.2em;
     color: #1A1A1A;
     font-weight: bold;
@@ -700,8 +699,7 @@ footer {
     font-weight: bold;
 }
 .captionResultsNeutral {
-    margin-left: 15%;
-    white-space: pre;
+    margin-left: 8%;
     font-size: 1.2em;
     color: #323A45;
     font-weight: bold;
