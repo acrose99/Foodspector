@@ -677,10 +677,10 @@ footer {
 /*Result cards */
 .resultsContainer {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     margin-top: 25px;
-    left: 10px;
-    transform: translateX(10%);
+    /*left: 10px;*/
+    /*transform: translateX(10%);*/
 }
 .captionResults {
     margin-left: 15%;
@@ -692,6 +692,8 @@ footer {
 .resultContainer {
     display: flex;
     /*width: 30%;*/
+    min-width: 300px;
+    max-width: 350px;
     text-align: left;
     margin-right: 20%;
     font-family: 'Big Shoulders', sans-serif;

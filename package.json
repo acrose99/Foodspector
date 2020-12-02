@@ -2,7 +2,7 @@
   "name": "foodspector",
   "version": "1.0.0",
   "description": "A web app for inspecting resturants in Chicago",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "build": "parcel build index.html aboutUs.html risk.html results.html list.html",
     "dev": "parcel index.html --open",
@@ -23,5 +23,8 @@
     "date-fns": "^2.16.1",
     "jquery": "3.5.1",
     "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "config": "^3.3.3"
   }
 }

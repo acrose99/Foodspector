@@ -37,7 +37,7 @@ function submitFunc() {
     // console.log(searchChosen);
     input = label.children[0].value;
     console.log("Restaurant: " + input);
-    // sessionStorage.setItem("search_query", input)
+    sessionStorage.setItem("search_query", input)
     if (searchChosen === "name") {
         filterByName(input);
     }
@@ -96,7 +96,7 @@ function filterByName(nameInputted) {
     } else {
         name = nameInputted.toUpperCase()
     }
-    sessionStorage.setItem("search_query", name)
+    // sessionStorage.setItem("search_query", name)
     console.log("Restaurant: " + name);
 
     /* All you need to do for a user inputted name is to convert the restaurant name into uppercase /*
@@ -125,7 +125,7 @@ function filterByName(nameInputted) {
         }
         else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
             // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 132 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
+            document.getElementById("results").innerHTML="<h2> Results for Name: '" + input + "':</h2>";
             for (let i = 0; i < data.length; i++) {
                 // appendResultList(data[i]);
                 appendResult(data[i]);
@@ -134,6 +134,7 @@ function filterByName(nameInputted) {
         }
         // document.location.href = "./list.html";
     });
+    sessionStorage.removeItem("search_query");
 }
 
 function filterByRisk(riskInputted) {
@@ -187,7 +188,7 @@ function filterByRisk(riskInputted) {
         }
         else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
             // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 194 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
+            document.getElementById("results").innerHTML="<h2> Results for Risk:'" + input + "':</h2>";
             for (let i = 0; i < data.length; i++) {
                 // appendResultList(data[i]);
                 appendResult(data[i]);
@@ -196,6 +197,7 @@ function filterByRisk(riskInputted) {
         }
         // document.location.href = "./list.html";
     });
+    sessionStorage.removeItem("search_query");
 }
 
 
@@ -236,7 +238,7 @@ function filterByZip(zipInputted) {
             }
             else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
                 // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 242 of main.js) for the syntax!");
-                document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
+                document.getElementById("results").innerHTML="<h2> Results for ZIP:'" + input + "':</h2>";
                 for (let i = 0; i < data.length; i++) {
                     // appendResultList(data[i]);
                     appendResult(data[i]);
@@ -245,6 +247,8 @@ function filterByZip(zipInputted) {
             }
             // document.location.href = "./list.html";
         });
+        sessionStorage.removeItem("search_query");
+
     }
     catch (e) {
         alert("Invalid Input!");
@@ -292,7 +296,7 @@ function filterByAddress(addressInputted) {
         }
         else { // Alex's code, although you can easily use my jQuery code too, and it will look cooler IMO.
             // alert("You can also load each resturant's data on it's own, using Alex R's code, check the code comments (Line 295 of main.js) for the syntax!");
-            document.getElementById("results").innerHTML="<h2> Results for '" + searchQ + "':</h2>";
+            document.getElementById("results").innerHTML="<h2> Results for Address:'" + input + "':</h2>";
             for (let i = 0; i < data.length; i++) {
                 // appendResultList(data[i]);
                 appendResult(data[i]);
@@ -301,6 +305,7 @@ function filterByAddress(addressInputted) {
         }
         // document.location.href = "./list.html";
     });
+    sessionStorage.removeItem("search_query");
 }
 
 
@@ -742,7 +747,7 @@ function appendResult(data) {
 
 
     inspectionViolationContainer.append(inspectionViolationIconContainer,inspectionViolationResult, inspectionViolationResults);
-
+    inspectionViolationContainer.style.marginRight = '0%';
 
     resultsContainer2.appendChild(inspectionViolationContainer);
 
