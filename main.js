@@ -698,8 +698,9 @@ function appendResult(data) {
         violationHint = "WIP";
     }
     else {
-        violationDescription = "Click to see what violations this location got!"
-        violationCount++; //TODO actually parse the file.
+        violationCount++;
+        violationDescription = "This restaurant received violations"
+        //TODO actually parse the file.
     }
 
 
@@ -736,9 +737,9 @@ function appendResult(data) {
     inspectionViolationResults.className = "captionResults";
     let  inspectionViolationCaptionResultText = document.createElement("p");
     inspectionViolationCaptionResultText.className = "captionResultText";
-    inspectionViolationCaptionResultText.innerText = violationCount + " violations." // TODO create logic for this
+    // inspectionViolationCaptionResultText.innerText = violationCount + " violations." // TODO create logic for this
 
-    inspectionViolationResults.appendChild(inspectionViolationCaptionResultText);
+    // inspectionViolationResults.appendChild(inspectionViolationCaptionResultText);
 
 
     inspectionViolationContainer.append(inspectionViolationIconContainer,inspectionViolationResult, inspectionViolationResults);
