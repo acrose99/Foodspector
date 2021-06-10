@@ -1,7 +1,7 @@
 {
   "name": "foodspector",
   "version": "1.0.0",
-  "description": "A web app for inspecting resturants in Chicago",
+  "description": "A web app for inspecting restaurants in Chicago",
   "main": "index.html",
   "scripts": {
     "build": "parcel build index.html aboutUs.html risk.html results.html list.html",
