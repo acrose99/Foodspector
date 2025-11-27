@@ -22,7 +22,7 @@
   "dependencies": {
     "date-fns": "^2.16.1",
     "jquery": "3.5.1",
-    "parcel": "^1.12.4"
+    "parcel": "^2.16.1"
   },
   "devDependencies": {
     "config": "^3.3.3"
